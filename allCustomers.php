@@ -31,7 +31,7 @@
 
 <body>
 
-       <p class="text-white bg-dark text-center" style="padding:30px;"> Choose your Account</p><br>';
+       <p class="text-white bg-dark text-center" style="padding:30px;"> Choose your Account</p><br>
         
         <?php 
 $db = mysqli_connect("localhost", "root", "", "bank");

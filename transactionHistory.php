@@ -24,7 +24,7 @@
 
 <body>
 
-       <p class="text-white bg-dark text-center" style="padding:30px;"> Transaction History!!</p><br>';
+       <p class="text-white bg-dark text-center" style="padding:30px;"> Transaction History!!</p><br>
         
         <?php 
 $db = mysqli_connect("localhost", "root", "", "bank");

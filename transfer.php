@@ -67,17 +67,17 @@ $result=mysqli_query($db,$list);?>
                 while($row = $result->fetch_assoc()) {
                     ?>
     
-    <div class="col-sm">
-      <h6> Sender Details
-                 <h6>Transaction Id:   <?php echo $row["Transaction_id"];?> <br></h6>
-                 <h6> Sender Name:   <?php echo $row["Sname"];?> <br></h6>
-                 <p> Sender Account id  <?php echo $row["Sacc_id"]; ?><br>
-                  Receiver Name   <?php echo $row["Rname"];?><br></p>
-                  <p> Receiver Account id  <?php echo $row["Racc_id"]; ?><br>
-      Amount transferd  <?php echo $row["Amount"];?><br></p>
-                  Date of transaction   <?php echo $row["Date"];?><br></p>
-                                     
-                </div>
+    <div class ="centered">
+      <div style="background-color: #ddd;   padding:7px; border-style: solid;">
+        <p><b> Transaction ID: </b>  <?php echo $row["Transaction_id"];?> <br></p><br>
+        <p><b> Sender Name: </b>  <?php echo $row["Sname"];?> <br></p>
+        <p><b> Sender Account ID: </b> <?php echo $row["Sacc_id"]; ?><br></p>
+        <p><b> Receiver Name:  </b> <?php echo $row["Rname"];?><br></p>
+        <p><b> Receiver Account ID: </b> <?php echo $row["Racc_id"]; ?><br><br>
+        <p><b> Amount: </b> <?php echo $row["Amount"];?><br></p>
+        <p><b> Date:  </b> <?php echo $row["Date"];?><br></p>
+      </div>                         
+    </div>
 
 <hr>
                   
