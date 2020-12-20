@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+  
+<title>GRIP Bank</title>
+<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+
+
+  
+  <script src="https://kit.fontawesome.com/502ce7a581.js" crossorigin="anonymous"></script>
+<style>
+
+#bg1
+{
+border:none;
+background-image:url(bank.jpg);
+background-repeat:no-repeat;
+background-size:100% 100%;
+background-attachment:scroll;
+opacity: 100%;
+}
+
+
+.member-text{
+    text-align:center;
+    color:black;
+    background-color: white;
+    padding:3px;
+    width:220px;    
+}
+img{
+    
+    height:250px;
+   
+}
+.team{
+    padding:100px;
+    background-color: black;
+    
+}
+.members-heading{
+  text-align: center;
+  padding:15px;
+  color:white;
+}
+#font2{
+color:black;
+font-family:Helvetica;
+font-size:40px;
+text-decoration:bold;
+}
+#font1{
+color:black;
+font-family:Helvetica;
+font-size:54px;
+text-decoration:bold;
+}
+
+
+
+#contact{
+  text-align: center;
+  padding:20px;
+  background-color: black;
+}
+
+
+
+</style>
+</head>
+<body>
+  <div class="w3-top">
+    <div class="w3-bar w3-white w3-padding w3-card" style="letter-spacing:4px;">
+      <a href="#home" class="w3-bar-item w3-button">Grip Bank</a>
+      <!-- Right-sided navbar links. Hide them on small screens -->
+      <div class="w3-right w3-hide-small">
+        <a href="#about" class="w3-bar-item w3-button">About</a>
+        <a href="#transfer" class="w3-bar-item w3-button">Transfer</a>
+        <a href="#past" class="w3-bar-item w3-button">Past Transactions</a>
+      </div>
+    </div>
+  </div>
+  
+
+<div class="w3-row w3-padding-64" id="about">
+    <div class="w3-col m6 w3-padding-large w3-hide-small">
+     <img src="bank.jpg" class="w3-round w3-image w3-opacity-min" alt="Table Setting" width="600" height="750">
+    </div>
+
+    <div class="w3-col m6 w3-padding-large">
+      <h1 class="w3-center">About GRIP Bank</h1><br>
+      <h5 class="w3-center">Tradition since 1889</h5>
+      <p class="w3-large">GRIP Group offers a wide range of banking products and financial services to corporate and retail customers through a variety of delivery channels and through its specialised group companies and subsidiaries in the areas of personal banking, investment banking, life and general insurance, venture capital and asset management. With a strong customer focus, the GRIP Group Companies have maintained and enhanced their leadership positions in their respective sectors.
+
+      
+         <span class="w3-tag w3-light-grey"></span></p>
+      <p class="w3-large w3-text-grey w3-hide-medium">  GRIP Bank is one of the largest private sector bank with total consolidated assets US $ 152.0 billion at March 31, 2017 
+         and profit after tax of US $ 1.5 billion for the year ended March 31, 2017. GRIP Bank currently has a network of 6,650 Branches and 20,789 ATM's 
+         globally.</p>
+    </div>
+  </div>
+  
+  <hr>
+
+<br><br><br>
+<div class="w3-black" id="transfer">
+  <div class="w3-container w3-content w3-padding-64" style="max-width:800px">
+    <!-- <h2 class="w3-wide w3-center">TOUR DATES</h2> -->
+    <p class="w3-opacity w3-center"><i></i></p><br>
+
+  
+    <div class="w3-row-padding w3-padding-12" style="margin:0 -1px">
+      <div class=" w3-margin-bottom">
+        <img src="transfer.jpg" alt="New York" style="width:100% " class="w3-hover-opacity">
+        <div class="w3-container w3-white">
+          <p><b>Quick transfer!</b></p>
+          <p class="w3-opacity">Easy and Safe Transactions</p>
+          <form action="allCustomers.php">
+          <button class="w3-button w3-black w3-margin-bottom">Make a Transfer</button>
+          </form>
+        </div>
+      </div>
+      <div class=" w3-margin-bottom" id="past" >
+        <img src="past.jpg" alt="Paris" style="width:100%" class="w3-hover-opacity">
+        <div class="w3-container w3-white">
+          <p><b>Keep track of all your transactions!</b></p>
+          <p class="w3-opacity">Consolidated and Detailed Trasaction Details</p>
+          <form action="transactionHistory.php">
+            <button class="w3-button w3-black w3-margin-bottom">View Past Transactions</button>
+            </form>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+</div>
+
+
+
+</body>
+</html>
