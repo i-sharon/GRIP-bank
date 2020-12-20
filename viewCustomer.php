@@ -68,6 +68,7 @@
 
 <?php    
         $db = mysqli_connect("localhost", "root", "", "bank");
+        $acc_id=$_SESSION['acc_id'];
 
 $list="select * from customer where Account_id='$acc_id'";
 $result=mysqli_query($db,$list);?>
@@ -81,13 +82,20 @@ $result=mysqli_query($db,$list);?>
                  <h6>Name:   <?php echo $row["Name"];?> <br></h6>
                  <p> Email  <?php echo $row["Email"]; ?><br>
                   Balance   <?php echo $row["Balance"];?><br></p>
-                                     
+                 <?php $_SESSION['Balance']=$row["Balance"];  ?>                                     
                 </div>
 
 <hr>
                   
    <?php         
-        }   
+        } 
+        
+        if(isset($_GET['login'])) {   
+               if($_GET['login'] == "fail"){ 
+                echo '<p style="padding:20px;" class="text-white table-danger text-center" align="center" >Email or password is wrong</p>';
+            }
+            }
+            
         ?>
 
         <form action='validate.php' method='POST' align='center'> 

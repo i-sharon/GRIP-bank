@@ -6,8 +6,17 @@
       $amount=$_POST['amount'];
       $acc_id=$_SESSION['acc_id'];
       $tacc_id=$_SESSION['tacc_id'];
+      echo $_SESSION['Balance'];
+
+      if($amount<=$_SESSION['Balance']){
 
       $db = mysqli_connect("localhost", "root", "", "bank");
+      $q=" UPDATE CUSTOMER SET Balance=Balance+'$amount' where Account_id='$tacc_id'";
+      mysqli_query($db,$q);
+
+      $q=" UPDATE CUSTOMER SET Balance=Balance-'$amount' where Account_id='$acc_id'";
+      mysqli_query($db,$q);
+      
       $s="select name from customer where Account_id='$acc_id'";
 $result=mysqli_query($db,$s);
 $row = mysqli_fetch_assoc($result);
@@ -27,6 +36,14 @@ $tname=$row['name'];
 
     
   }
+
+  else{
+
+    header('location:transferAmount.php?amount=fail');
+
+
+  }
+}
  
 ?>
 

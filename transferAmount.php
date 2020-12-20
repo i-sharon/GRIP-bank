@@ -32,10 +32,11 @@
 </div>
 
 <body>
-<h4 style="padding:20px;" class="text-white bg-dark text-center"> Enter The Amount To Transfer</h4><br>
+<p style="padding:20px;" class="text-white bg-dark text-center"> Enter The Amount To Transfer</p><br>
 
 <?php    
         $db = mysqli_connect("localhost", "root", "", "bank");
+        $tacc_id=$_SESSION['tacc_id'];
 
 $list="select * from customer where Account_id='$tacc_id'";
 $result=mysqli_query($db,$list);?>
@@ -55,7 +56,14 @@ $result=mysqli_query($db,$list);?>
 <hr>
                   
    <?php         
-        }   
+        } 
+        if(isset($_GET['amount'])) {   
+          if($_GET['amount'] == "fail"){ 
+           echo '<p style="padding:20px;" class="text-white table-danger text-center" align="center" >Amount entered  is greater than Balance </p>';
+       }
+       }
+       
+     
         ?>
 
         <form action='transfer.php' method='POST' align='center'> 

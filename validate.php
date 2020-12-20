@@ -21,7 +21,7 @@ if($num==1){
 }
 else
 {
-	echo "Login invalid";
+	header('location:viewCustomer.php?login=fail');
 }
 
  
